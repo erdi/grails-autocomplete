@@ -1,0 +1,1 @@
+This is a bash script that easily auto-completes all grails commands - for example, install-plugins lists all plugins, generate-(views|controller|all) completes domain classes, test-app all your tests and etc.
