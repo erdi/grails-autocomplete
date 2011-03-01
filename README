@@ -3,17 +3,17 @@ This is a bash script (originally written by Fernando Takai) that allows auto-co
 To use it you have to have gawk (it's default on some linux distros -- but on mac, you have to install trough mac ports)
 
 To start using it you need to add this:
-
 [ -r /path/to/the/file ] && source /path/to/the/file
 
 To the top of your ~/.bashrc or ~/.bash_profile scripts.
 
-And login again! (su - your_user)
+For your changes to take affect you must open a new shell or re-login to your current shell (su - your_user).
 
 To use it, just go your grails project and try:
+grails list<tab>
+grails create<tab><tab>
+grails create-a<tab><tab>
 
-grails gener<tab><tab>
+Download this script from GitHub:
+https://github.com/podollb/grails-autocomplete/archives/master
 
-grails generate-a<tab><tab>
-
-grails generate-all <tab><tab>
