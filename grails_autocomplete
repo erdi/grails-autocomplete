@@ -31,6 +31,10 @@ _grails_comp(){
 	prev="${COMP_WORDS[COMP_CWORD-1]}"
 	if [ -r ./grails-app ]; then
 		SCRIPT_DIRS="$GRAILS_HOME/scripts ./scripts $HOME/.grails/scripts"
+    PROJECT_NAME=$(ls .. 2> /dev/null)$
+    for PLUGIN_DIR in $(ls -d $HOME/.grails/$GRAILS_VERSION/projects/$PROJECT_NAME/plugins/*/scripts 2> /dev/null); do$ 
+      SCRIPT_DIRS="$SCRIPT_DIRS $PLUGIN_DIR"$
+    done
 		if [ -d plugins ]
 			then for PLUGIN_DIR in $(ls -d plugins/*/scripts 2> /dev/null); do
 			SCRIPT_DIRS="$SCRIPT_DIRS $PLUGIN_DIR"
